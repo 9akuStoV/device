@@ -7,7 +7,6 @@
     --basic_black_opacity30: rgba(0, 0, 0, 0.3);
     --basic_grey: #e5e5e5;
     --basic_dark: #363636;
-
 }
 @font-face{
     font-family: "gilroyextrabold";
@@ -79,17 +78,23 @@ body{
     opacity: 1;    
 }
 .button_search_form {
+    display: none;
+}
+.search_form:focus + .button_search_form {
+    display: inline;
     font-family: 'opensans', sans-serif;
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
     background: none;    
 }
-.button_search_form:hover {
+.search_form:focus + .button_search_form:hover {
+    display: inline;
     color: var(--basic_white);
     background-color: var(--basic_black);
 }
-.button_search_form:active {
+.search_form + .button_search_form:active {
+    display: inline;
     color: var(--basic_white_opacity30);
     background-color: var(--basic_black);
 }
