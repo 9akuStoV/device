@@ -1,8 +1,11 @@
 :root{
     --special_yellow: #f7e296;
+    --special_yellow_dark: #f0c52e;
     --basic_black: #000;
     --basic_white: #fff;
     --basic-white-opacity30: rgba(255, 255, 255, 0.3);
+    --basic-black-opacity30: rgba(0, 0, 0, 0.3);
+    --basic-grey: #e5e5e5;
 
 }
 @font-face{
@@ -10,6 +13,12 @@
     font-style: normal;
     src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
        url("../fonts/gilroyextrabold.woff") format("woff");
+}
+@font-face{
+    font-family: "gilroylight";
+    font-style: normal;
+    src: url("../fonts/gilroylight.woff2") format("woff2"),
+        url("../fonts/gilroylight.woff") format("woff");
 }
 @font-face{
     font-family: "opensans";
@@ -24,7 +33,16 @@ a {
 li {
     list-style-type: none; /* Убираем маркеры */
 }
+.visually-hidden {
+    display: none;
+}
+body{
+	padding: 0;
+	margin: 0;
+  	background: var(--basic_white);
+}
 /* Шапка */
+
 .logo:hover {
     opacity: 0.6;
 }
@@ -40,12 +58,14 @@ li {
 	font-size: 18px;
 	line-height: 22px;
 	text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 .header_menu, .catalog_menu {
     font-family: 'opensans', sans-serif;
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: none;
+    letter-spacing: normal;
 }
 .search_form {
     opacity: 0.3;
@@ -77,4 +97,210 @@ li {
 }
 .elements_header_menu:active, .elements_nav_menu:active {
     opacity: 0.3;
+}
+
+/* Слайдер */
+
+.slide_header {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 47px;
+	line-height: 58px;
+}
+.slide_text {
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+}
+.slide_detail {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.slide_detail:hover {
+    background-color: var(--special_yellow_dark);
+}
+.slide_detail:active {
+    color: var(--basic-black-opacity30);   
+}
+.slide_description {
+    font-family: 'gilroylight', sans-serif;
+    letter-spacing: 0.2em;
+}
+.slide_description dt {
+    font-size: 13px;
+	line-height: 15px;
+}
+.slide_description dd {
+    font-size: 36px;
+	line-height: 42px;    
+}
+
+/* Категории товаров */
+
+.category_item div{    
+    width: 160px;
+    height: 160px;
+}
+.category_item:nth-child(1) div{
+    background: url(../img/popular/popular_1.svg) var(--special_yellow) center no-repeat;
+}
+.category_item:nth-child(2) div{
+    background: url(../img/popular/popular_2.svg) var(--special_yellow) center no-repeat;
+}
+.category_item:nth-child(3) div{
+    background: url(../img/popular/popular_3.svg) var(--special_yellow) center no-repeat;
+}
+.category_item:nth-child(4) div{
+    background: url(../img/popular/popular_4.svg) var(--special_yellow) center no-repeat;
+}
+.category_item:nth-child(5) div{
+    background: url(../img/popular/popular_5.svg) var(--special_yellow) center no-repeat;
+}
+.category_item:nth-child(6) div{
+    background: url(../img/popular/popular_6.svg) var(--special_yellow) center no-repeat;
+}
+.category_item div:hover{
+    background-color: var(--special_yellow_dark);
+}
+.category_item:nth-child(1) div:active{
+    background-image: url(../img/popular/opacity/popular_1.svg);
+    background-color: var(--special_yellow_dark);
+}
+.category_item:nth-child(2) div:active{
+    background-image: url(../img/popular/opacity/popular_2.svg);
+    background-color: var(--special_yellow_dark);
+}
+.category_item:nth-child(3) div:active{
+    background-image: url(../img/popular/opacity/popular_3.svg);
+    background-color: var(--special_yellow_dark);
+}
+.category_item:nth-child(4) div:active{
+    background-image: url(../img/popular/opacity/popular_4.svg);
+    background-color: var(--special_yellow_dark);
+}
+.category_item:nth-child(5) div:active{
+    background-image: url(../img/popular/opacity/popular_5.svg);
+    background-color: var(--special_yellow_dark);
+}
+.category_item:nth-child(6) div:active{
+    background-image: url(../img/popular/opacity/popular_6.svg);
+    background-color: var(--special_yellow_dark);
+}
+
+/* Услуги */
+
+.service {
+    background-color: var(--basic-grey);
+}
+.service_radio {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.service_header {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 47px;
+	line-height: 58px;
+    letter-spacing: 0.2em;
+}    
+.service_radio label:hover {
+    background-color: var(--special_yellow_dark);
+}
+.service_radio input:checked + label {
+    color:  var(--special_yellow);
+    background-color: var(--basic_black);
+}
+.service_radio input {
+    display: none;
+}
+.service_text {
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+    letter-spacing: 0.1em;
+}
+.service_item:nth-child(1) {
+    background: url(../img/service/delivery.svg) no-repeat right;
+}
+.service_item:nth-child(2) {
+    background: url(../img/service/warranty.svg) no-repeat right;
+}
+.service_item:nth-child(3) {
+    background: url(../img/service/credit.svg) no-repeat right;
+}
+
+/* Бренды */
+
+.brand_item {
+    filter: grayscale(1);
+    opacity: 0.3;
+}
+.brand_item:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* О нас */
+
+.about_header {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 47px;
+	line-height: 58px;
+    letter-spacing: 0.2em;
+}
+.about_text {
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+}
+.delivery_item {
+    list-style-type: disc;
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 16px;
+	line-height: 28px;
+}
+.about_detail {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.about_detail:hover {
+    background-color: var(--special_yellow_dark);
+}
+.about_detail:active {
+    color: var(--basic-black-opacity30);   
+}
+
+/* Контакты */
+
+.contact_header {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 47px;
+	line-height: 58px;
+    letter-spacing: 0.2em;
+}
+.contact_text {
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.contact_write_to_us {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.contact_write_to_us:hover {
+    background-color: var(--special_yellow_dark);
+}
+.contact_write_to_us:active {
+    color: var(--basic-black-opacity30);   
 }
