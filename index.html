@@ -9,45 +9,50 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
+    <link rel="stylesheet" href="css/style.css">
+
   </head>
   <body>
-    <header>
-      <a>
+    <header class="header_page">
+      <a class="logo">
         <img src="img/device_logo.svg" width="164" height="35" alt="Логотип магазина «Device».">
       </a>
-      <form action="https://echo.htmlacademy.ru/courses" method="get">
-        <input type="text" name="search_form" placeholder="Поиск по сайту">  
-        <button type="submit">Найти</button>      
-      </form>
-      <ul>
-        <li>
-          <a href="blank.html">Войти</a>
-        </li>
-        <li>
-          <a href="blank.html">Сравнить</a>
-        </li>
-        <li>
-          <a href="blank.html">Корзина</a>
-        </li>
-      </ul>
-      <nav>
-        <a href="catalog.html">Каталог товаров</a>
+      <div class="header_menu">
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
+          <input class="search_form" type="text" name="search_form" placeholder="Поиск по сайту">  
+          <button class="button_search_form" type="submit">Найти</button>      
+        </form>
+        <ul >
+          <li class="elements_header_menu">
+            <a href="blank.html">Войти</a>
+          </li>
+          <li class="elements_header_menu">
+            <a href="blank.html">Сравнить</a>
+          </li>
+          <li class="elements_header_menu">
+            <a href="blank.html">Корзина</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="nav_menu">
+        <a class="elements_nav_menu" href="catalog.html">Каталог товаров</a>
         
-        <ul>  <!--Выпадающий каталог-->
-          <li><a href="blank.html">Виртуальная реальность</a></li>
-          <li><a href="blank.html">Моноподы для селфи</a></li>
-          <li><a href="blank.html">Экшн-камеры</a></li>
-          <li><a href="blank.html">Фитнес-браслеты</a></li>
-          <li><a href="blank.html">Умные часы</a></li>
-          <li><a href="blank.html">Квадрокоптер</a></li>          
+        <ul class="catalog_menu">  <!--Выпадающий каталог-->
+          <li><a class="elements_nav_menu" href="blank.html">Виртуальная реальность</a></li>
+          <li><a class="elements_nav_menu" href="blank.html">Моноподы для селфи</a></li>
+          <li><a class="elements_nav_menu" href="blank.html">Экшн-камеры</a></li>
+          <li><a class="elements_nav_menu" href="blank.html">Фитнес-браслеты</a></li>
+          <li><a class="elements_nav_menu" href="blank.html">Умные часы</a></li>
+          <li><a class="elements_nav_menu" href="blank.html">Квадрокоптер</a></li>          
         </ul>
         <ul>
-          <li><a href="blank.html">Доставка</a></li>
-          <li><a href="blank.html">Гарантия</a></li>
-          <li><a href="blank.html">Контакты</a></li>              
+          <li><a class="elements_nav_menu" href="blank.html">Доставка</a></li>
+          <li><a class="elements_nav_menu" href="blank.html">Гарантия</a></li>
+          <li><a class="elements_nav_menu" href="blank.html">Контакты</a></li>              
         </ul>
       </nav>
     </header>
+
     <main>
       <h1>Главная страница Интернет магазина «Device»</h1>
       <section> 

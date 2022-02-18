@@ -1,0 +1,80 @@
+:root{
+    --special_yellow: #f7e296;
+    --basic_black: #000;
+    --basic_white: #fff;
+    --basic-white-opacity30: rgba(255, 255, 255, 0.3);
+
+}
+@font-face{
+    font-family: "gilroyextrabold";
+    font-style: normal;
+    src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
+}
+@font-face{
+    font-family: "opensans";
+    font-style: normal;
+    src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff");
+}
+a {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: var(--basic_black);
+}
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+/* Шапка */
+.logo:hover {
+    opacity: 0.6;
+}
+.logo:active {
+    opacity: 0.3;
+}
+.header_page {
+    width: 1160px;
+    background: var(--special_yellow);
+}
+.nav_menu {
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+.header_menu, .catalog_menu {
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: none;
+}
+.search_form {
+    opacity: 0.3;
+    background: var(--special_yellow);
+}
+.search_form:hover {
+    opacity: 0.6;    
+}
+.search_form:focus {
+    opacity: 1;    
+}
+.button_search_form {
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+    background: none;    
+}
+.button_search_form:hover {
+    color: var(--basic_white);
+    background-color: var(--basic_black);
+}
+.button_search_form:active {
+    color: var(--basic-white-opacity30);
+    background-color: var(--basic_black);
+}
+.elements_header_menu:hover, .elements_nav_menu:hover {
+    opacity: 0.6;
+}
+.elements_header_menu:active, .elements_nav_menu:active {
+    opacity: 0.3;
+}
