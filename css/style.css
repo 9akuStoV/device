@@ -3,9 +3,10 @@
     --special_yellow_dark: #f0c52e;
     --basic_black: #000;
     --basic_white: #fff;
-    --basic-white-opacity30: rgba(255, 255, 255, 0.3);
-    --basic-black-opacity30: rgba(0, 0, 0, 0.3);
-    --basic-grey: #e5e5e5;
+    --basic_white_opacity30: rgba(255, 255, 255, 0.3);
+    --basic_black_opacity30: rgba(0, 0, 0, 0.3);
+    --basic_grey: #e5e5e5;
+    --basic_dark: #363636;
 
 }
 @font-face{
@@ -53,7 +54,7 @@ body{
     width: 1160px;
     background: var(--special_yellow);
 }
-.nav_menu {
+.nav_menu a{
     font-family: 'gilroyextrabold', sans-serif;
 	font-size: 18px;
 	line-height: 22px;
@@ -89,7 +90,7 @@ body{
     background-color: var(--basic_black);
 }
 .button_search_form:active {
-    color: var(--basic-white-opacity30);
+    color: var(--basic_white_opacity30);
     background-color: var(--basic_black);
 }
 .elements_header_menu:hover, .elements_nav_menu:hover {
@@ -122,7 +123,7 @@ body{
     background-color: var(--special_yellow_dark);
 }
 .slide_detail:active {
-    color: var(--basic-black-opacity30);   
+    color: var(--basic_black_opacity30);   
 }
 .slide_description {
     font-family: 'gilroylight', sans-serif;
@@ -192,7 +193,7 @@ body{
 /* Услуги */
 
 .service {
-    background-color: var(--basic-grey);
+    background-color: var(--basic_grey);
 }
 .service_radio {
     font-family: 'gilroyextrabold', sans-serif;
@@ -274,7 +275,7 @@ body{
     background-color: var(--special_yellow_dark);
 }
 .about_detail:active {
-    color: var(--basic-black-opacity30);   
+    color: var(--basic_black_opacity30);   
 }
 
 /* Контакты */
@@ -290,7 +291,6 @@ body{
 	font-size: 15px;
 	line-height: 30px;
 }
-
 .contact_write_to_us {
     font-family: 'gilroyextrabold', sans-serif;
 	font-size: 18px;
@@ -302,5 +302,55 @@ body{
     background-color: var(--special_yellow_dark);
 }
 .contact_write_to_us:active {
-    color: var(--basic-black-opacity30);   
+    color: var(--basic_black_opacity30);   
+}
+
+/* Подвальчик */
+
+.footer_page {
+    background-color: var(--basic_dark);
+}
+.logo_footer:hover {
+    opacity: 0.6;
+}
+.logo_footer:active {
+    opacity: 0.3;
+}
+address, .footer_phone_number, .footer_phone_number a {
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 20px; 
+    color: var(--basic_white);
+    font-style: normal;
+}
+.footer_nav_menu a{
+    font-family: 'gilroyextrabold', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--basic_white);
+}
+.footer_menu a{
+    font-family: 'opensans', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: none;
+    letter-spacing: normal;
+    color: var(--basic_white);
+}
+.elements_footer_menu:hover, .elements_footer_nav_menu:hover, .academy:hover {
+    opacity: 0.6;
+}
+.elements_footer_menu:active, .elements_footer_nav_menu:active, .academy:active {
+    opacity: 0.3;
+}
+.social_item {
+    opacity: 0.5;
+}
+.social_item:hover {
+    opacity: 1;
+}
+.social_item:active {
+    opacity: 0.16;
 }
