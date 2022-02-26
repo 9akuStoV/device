@@ -3,33 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Device</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
   </head>
   <body>
-    <header>
-      <a>
-        <img src="https://via.placeholder.com/164x35" width="164" height="35" alt="Логотип магазина «Device»">
+    <header class="header_page">
+      <a class="header_logo">
+        <img src="img/device_logo.svg" width="164" height="35" alt="Логотип магазина «Device».">
       </a>
-      <form action="https://echo.htmlacademy.ru/courses" method="get">
-        <input type="text" name="search_form" placeholder="Поиск по сайту">        
-      </form>
-      <a href="blank.html">Войти</a>
-      <a href="blank.html">Сравнить</a>
-      <a href="blank.html">Корзина</a>
-      <nav>
-        <a href="blank.html">Каталог товаров</a>
-        
-        <ul>  <!--Выпадающий каталог-->
-          <li><a href="blank.html">Виртуальная реальность</a></li>
-          <li><a href="blank.html">Моноподы для селфи</a></li>
-          <li><a href="blank.html">Экшн-камеры</a></li>
-          <li><a href="blank.html">Фитнес-браслеты</a></li>
-          <li><a href="blank.html">Умные часы</a></li>
-          <li><a href="blank.html">Квадрокоптер</a></li>          
+      <div class="header_menu">
+        <form class="header_search_form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <input class="header_search_input" type="text" name="search_form" placeholder="Поиск по сайту">  
+          <button class="header_search_button" type="submit">Найти</button>      
+        </form>
+        <ul class="header_menu_list">
+          <li class="header_menu_item">
+            <a href="blank.html">Войти</a>
+          </li>
+          <li class="header_menu_item">
+            <a href="blank.html">Сравнить</a>
+          </li>
+          <li class="header_menu_item">
+            <a href="blank.html">Корзина</a>
+          </li>
         </ul>
-        <ul>
-          <li><a href="blank.html">Доставка</a></li>
-          <li><a href="blank.html">Гарантия</a></li>
-          <li><a href="blank.html">Контакты</a></li>              
+      </div>
+      <nav class="header_nav_menu">
+        <a class="nav_catalog" href="catalog.html">Каталог товаров</a>
+        
+        <ul class="nav_catalog_list">  <!--Выпадающий каталог-->
+          <li><a class="nav_catalog_item" href="blank.html">Виртуальная реальность</a></li>
+          <li><a class="nav_catalog_item" href="blank.html">Моноподы для селфи</a></li>
+          <li><a class="nav_catalog_item" href="blank.html">Экшн-камеры</a></li>
+          <li><a class="nav_catalog_item" href="blank.html">Фитнес-браслеты</a></li>
+          <li><a class="nav_catalog_item" href="blank.html">Умные часы</a></li>
+          <li><a class="nav_catalog_item" href="blank.html">Квадрокоптер</a></li>          
+        </ul>
+        <ul class="nav_list">
+          <li><a class="nav_item" href="blank.html">Доставка</a></li>
+          <li><a class="nav_item" href="blank.html">Гарантия</a></li>
+          <li><a class="nav_item" href="blank.html">Контакты</a></li>              
         </ul>
       </nav>
     </header>
@@ -38,43 +58,56 @@
       
       </main>
 
-      <footer>
-        <div> <!--Первая строка футера-->
-          <a>
-            <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип магазина Device">
+      <footer class="footer_page">
+        <div class="footer_menu"> <!--Первая строка футера-->
+          <a class="logo_footer">
+            <img src="img/device_logo_footer.svg" width="163" height="35" alt="Логотип магазина Device.">
           </a>
           <ul>
-            <li><a href="blank.html">Войти</a></li>
-            <li><a href="blank.html">Сравнить</a></li>
-            <li><a href="blank.html">Корзина</a></li>              
+            <li class="elements_footer_menu">
+              <a href="blank.html">Войти</a>
+            </li>
+            <li class="elements_footer_menu">
+              <a href="blank.html">Сравнить</a>
+            </li>
+            <li class="elements_footer_menu">
+              <a href="blank.html">Корзина</a>
+            </li>              
           </ul>          
         </div>
         <div> <!--Вторая строка футера-->
-          <p>г. Москва, ул. Строителей, 15</p>
-          <ul>
-            <li><a href="blank.html">Доставка</a></li>
-            <li><a href="blank.html">Гарантия</a></li>
-            <li><a href="blank.html">Контакты</a></li>              
+          <address>
+            г. Москва, ул. Строителей, 15
+          </address>
+          <ul class="footer_nav_menu">
+            <li class="elements_footer_nav_menu"><a href="blank.html">Доставка</a></li>
+            <li class="elements_footer_nav_menu"><a href="blank.html">Гарантия</a></li>
+            <li class="elements_footer_nav_menu"><a href="blank.html">Контакты</a></li>              
           </ul>
-          Тел.:<a href="tel:+74954959595"> +7 (495) 495-95-95</a>          
+            <p class="footer_phone_number">
+              Тел.:<a href="tel:+74954959595"> +7 (495) 495-95-95</a>          
+            </p>            
         </div>
         <div> <!--Третья строка футера-->
-          <ul>
-            <li><a href="blank.html">
-              <img src="https://via.placeholder.com/32x32" width="32" height="32" alt="Фейсбук">
-            </a></li>
-            <li><a href="blank.html">
-              <img src="https://via.placeholder.com/32x32" width="32" height="32" alt="Инстаграм">
-            </a></li>
-            <li><a href="blank.html">
-              <img src="https://via.placeholder.com/32x32" width="32" height="32" alt="Твиттер">
-            </a></li>              
+          <ul class="social_list">
+            <li class="social_item">
+              <a href="blank.html">
+                <img src="img/social/fb.svg" width="32" height="32" alt="Фейсбук.">
+              </a></li>
+            <li class="social_item">
+              <a href="blank.html">
+                <img src="img/social/inst.svg" width="32" height="32" alt="Инстаграм.">
+              </a></li>
+            <li class="social_item">
+              <a href="blank.html">
+                <img src="img/social/twitter.svg" width="32" height="32" alt="Твиттер.">
+              </a></li>              
           </ul> 
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy">
+            <img src="img/social/html_academy.svg" width="27" height="34" alt="Логотип htmlacademy.">
           </a>         
         </div>
-      </footer>
+      </footer> 
 
           
 
