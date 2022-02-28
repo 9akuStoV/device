@@ -77,6 +77,8 @@ body{
 	line-height: 22px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    background-color: inherit;
+    border-style: none;
 }
 
 .button:hover {
@@ -189,7 +191,9 @@ body{
 }
 
 .catalog_header,
-.nav_list {
+.nav_list,
+.product_title,
+.product_price {
     font-family: 'Gilroy', "Arial", sans-serif;
     font-weight: 800;
 	font-size: 18px;
@@ -217,7 +221,8 @@ body{
 }
 
 
-.slide_header {
+.slide_header,
+.catalog_title {
     font-family: 'Gilroy', "Arial", sans-serif;
     font-weight: 800;
 	font-size: 47px;
@@ -495,30 +500,30 @@ address,
 
 /* catalog.html */
 /* main */
-.catalog_main_header {
-    font-family: 'gilroyextrabold', sans-serif;
-    font-size: 47px;
-	line-height: 58px;
-}
+
 .bread_crumbs_list {
-    font-family: 'opensans', sans-serif;
-	font-size: 14px;
-	line-height: 19px;
+    font-size: 15px;
+    line-height: 20px;
 }
+
 .bread_crumbs_item {
     opacity: 0.3;
 }
+
 .bread_crumbs_item:hover {
     opacity: 0.6;
 }
+
 .bread_crumbs_item:active {
     opacity: 0.1;
 }
 
 /* Первая полоса*/
-.filter_sorting_container {
-    font-family: 'gilroyextrabold', sans-serif;
-    font-size: 16px;
+.filter_title,
+.sorting_title {
+    font-family: 'Gilroy', "Arial", sans-serif;
+    font-weight: 800;
+	font-size: 16px;
 	line-height: 20px; 
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -529,25 +534,30 @@ address,
 .sorting_container {
     background-color: var(--basic_grey);
 }
+
 .sorting_list{
-    font-family: 'opensans', sans-serif;
-	font-size: 14px;
-	line-height: 19px;
-    text-transform: none;
+    font-family: "OpenSans", "Arial", sans-serif;
     font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
 }
+
 .sorting_item label{
     opacity: 0.3;
 }
+
 .sorting_item label:hover {
     opacity: 0.6;
 }
+
 .sorting_list input:checked + label {
     opacity: 1;    
 }
+
 .sorting_item input {
     display: none;
 }
+
 .minmax_item input {
     display: none;
 }
@@ -575,7 +585,8 @@ address,
 /* Блок фильтрации*/
 
 .filtration_legend {
-    font-family: 'gilroyextrabold', sans-serif;
+    font-family: 'Gilroy', "Arial", sans-serif;
+    font-weight: 800;
     font-size: 14px;
 	line-height: 17px; 
     letter-spacing: 0.1em;
@@ -584,17 +595,20 @@ address,
     background-color: var(--basic_grey); 
 }
 .filtration_block_price {
-    font-family: 'gilroylight', sans-serif;
+    font-family: 'Gilroy', "Arial", sans-serif;
+    font-weight: 300;
     font-size: 14px;
 	line-height: 16px;
     border: none;
     background-color: transparent;
 }
 .fieldset_list {
-    font-family: 'opensans', sans-serif;
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-weight: 300;
 	font-size: 14px;
 	line-height: 19px;
 }
+/*
 .filtration_button {
     font-family: 'gilroyextrabold', sans-serif;
 	font-size: 18px;
@@ -603,13 +617,15 @@ address,
     letter-spacing: 0.2em;
     border: none;
     background-color: transparent;
-}
+}    */
+
 .filtration_button:hover {
     background-color: var(--special_yellow_dark);
 }
 .filtration_button:active {
     color: var(--basic_black_opacity30);   
 }
+/*
 .product_cart_button {
     font-family: 'gilroyextrabold', sans-serif;
 	font-size: 18px;
@@ -618,7 +634,7 @@ address,
     letter-spacing: 0.2em;
     border: none;
     background-color: transparent;
-}
+}*/
 .product_cart_button:hover {
     background-color: var(--special_yellow_dark);
 }
@@ -626,17 +642,30 @@ address,
     color: var(--basic_black_opacity30);   
 }
 .product_compare_button {
-    font-family: 'opensans', sans-serif;
+    font-family: 'OpenSans', sans-serif;
 	font-size: 13px;
 	line-height: 18px;
     letter-spacing: 0.1em;
     opacity: 0.5;
-    border: none;
-    background-color: transparent;
+    text-transform: none;
+    /*border: none;
+    background-color: transparent;*/
 }
 .product_compare_button:hover {
     opacity: 1;
 }
 .product_compare_button:active {
     opacity: 0.2;
+}
+
+/* Каталог товаров*/
+
+.product_title,
+.product_price{
+    text-transform: none;
+    letter-spacing: 0.05em;
+}
+
+.product_price {
+    font-weight: 300;
 }

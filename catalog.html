@@ -15,66 +15,69 @@
   </head>
   <body>
     <header class="header_page">
-      <a href="index.html" class="logo">
-        <img src="img/device_logo.svg" width="163" height="35" alt="Логотип магазина Device.">
+      <a class="header_logo">
+        <img src="img/device_logo.svg" width="164" height="35" alt="Логотип магазина «Device».">
       </a>
       <div class="header_menu">
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
-          <input class="search_form" type="text" name="search_form" placeholder="Поиск по сайту">  
-          <button class="button_search_form" type="submit">Найти</button>      
+        <form class="header_search_form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <input class="header_search_input" type="text" name="search_form" placeholder="Поиск по сайту">  
+          <button class="header_search_button" type="submit">Найти</button>      
         </form>
-        <ul>
-          <li class="elements_header_menu">
+        <ul class="header_menu_list">
+          <li class="header_menu_item">
             <a href="blank.html">Валентин Петухов</a>
           </li>
-          <li class="elements_header_menu">
-            <a href="blank.html">Выйти</a>
+          <li class="header_menu_item">
+            <a href="blank.html">Войти</a>
           </li>
-          <li class="elements_header_menu">
+          <li class="header_menu_item">
             <a href="blank.html">Сравнить</a>
           </li>
-          <li class="elements_header_menu">
+          <li class="header_menu_item">
             <a href="blank.html">Корзина</a>
           </li>
         </ul>
       </div>
-      <nav class="nav_menu">
-        <a class="elements_nav_menu">Каталог товаров</a>
-        
-        <ul class="catalog_menu">  <!--Выпадающий каталог-->
-          <li><a class="elements_nav_menu" href="blank.html">Виртуальная реальность</a></li>
-          <li><a class="elements_nav_menu" href="blank.html">Моноподы для селфи</a></li>
-          <li><a class="elements_nav_menu" href="blank.html">Экшн-камеры</a></li>
-          <li><a class="elements_nav_menu" href="blank.html">Фитнес-браслеты</a></li>
-          <li><a class="elements_nav_menu" href="blank.html">Умные часы</a></li>
-          <li><a class="elements_nav_menu" href="blank.html">Квадрокоптер</a></li>          
-        </ul>
-        <ul>
-          <li><a class="elements_nav_menu" href="blank.html">Доставка</a></li>
-          <li><a class="elements_nav_menu" href="blank.html">Гарантия</a></li>
-          <li><a class="elements_nav_menu" href="blank.html">Контакты</a></li>              
+      <nav class="header_nav_menu">
+        <div class="nav_catalog">
+          <a class="catalog_header" href="catalog.html">Каталог товаров</a>
+          <ul class="catalog_list">  <!--Выпадающий каталог-->
+            <li><a class="catalog_item" href="blank.html">Виртуальная реальность</a></li>
+            <li><a class="catalog_item" href="blank.html">Моноподы для селфи</a></li>
+            <li><a class="catalog_item" href="blank.html">Экшн-камеры</a></li>
+            <li><a class="catalog_item" href="blank.html">Фитнес-браслеты</a></li>
+            <li><a class="catalog_item" href="blank.html">Умные часы</a></li>
+            <li><a class="catalog_item" href="blank.html">Квадрокоптер</a></li>          
+          </ul>
+        </div>
+        <ul class="nav_list">
+          <li><a class="nav_item" href="blank.html">Доставка</a></li>
+          <li><a class="nav_item" href="blank.html">Гарантия</a></li>
+          <li><a class="nav_item" href="blank.html">Контакты</a></li>              
         </ul>
       </nav>
     </header>
     <main>
-      <h1 class="catalog_main_header">Моноподы для селфи</h1>
-      <ul class="bread_crumbs_list"> <!--Хлебные крошки-->
-        <li class="bread_crumbs_item">
-            <a href="index.html">
-              Главная            
-            </a>
-        </li>
-        <li class="bread_crumbs_item">
-            <a href="blank.html">
-              Каталог товаров
-            </a>
-        </li>
-        <li class="bread_crumbs_item">
-            <a>
-              Моноподы для селфи           
-            </a>
-        </li>        
-      </ul>
+      <h1 class="catalog_title">Моноподы для селфи</h1>
+      <!--<div class="catalog_main_header">-->
+        <ul class="bread_crumbs_list"> <!--Хлебные крошки-->
+          <li class="bread_crumbs_item">
+              <a href="index.html">
+                Главная            
+              </a>
+          </li>
+          <li class="bread_crumbs_item">
+              <a href="blank.html">
+                Каталог товаров
+              </a>
+          </li>
+          <li class="bread_crumbs_item">
+              <a>
+                Моноподы для селфи           
+              </a>
+          </li>        
+        </ul>
+      <!--</div>-->
 
 
     <section>
@@ -82,10 +85,10 @@
         <div class="filter_sorting_container"> <!--Блок фильтра и сортировки-->
           <h2 class="visually_hidden">Панель сортировки</h2>
           <div class="filter_container">
-            Фильтр:
+            <span class="filter_title">Фильтр:</span>
           </div>
           <div class="sorting_container">
-            <div>Сортировка:</div>
+            <span class="sorting_title">Сортировка:</span>
             <div> 
               <ul class="sorting_list">
                 <li class="sorting_item">
@@ -114,7 +117,7 @@
                 </li>
                 </ul>   
             </div>
-            </div>
+          </div>
         </div>
       </div>
 
@@ -175,77 +178,77 @@
                   </li>
                 </ul>
             </fieldset>          
-          <button class="filtration_button" type="submit">Показать</button>
+          <button class="filtration_button button" type="submit">Показать</button>
         </form>
         </div>
         <div class="product_block"> <!--Блок с товарами-->
           <h2 class="visually_hidden">Список товаров</h2>
           <ul class="product_list">
-              <li>
-                <div>
+              <li class="product_item">
+                <div class="product_picture">
                   <a href="blank.html">
                     <img src="img/product/item_1.jpg" width="360" height="380" alt="Любительская селфи-палка.">
                   </a>
                   <div>
-                    <button class="product_cart_button">В корзину</button>
-                    <button class="product_compare_button">Добавить к сравнению</button>
+                    <button class="product_cart_button button">В корзину</button>
+                    <button class="product_compare_button button">Добавить к сравнению</button>
                   </div>
                 </div>
-                <div>
-                  <a href="blank.html">Любительская селфи-палка</a>
-                  <span>1100 руб</span>
+                <div class="product_header">
+                  <a class="product_title" href="blank.html">Любительская селфи-палка</a>
+                  <span class="product_price">1100 руб</span>
                 </div>
-                <span>New</span>   
+                <span class="product_new">New</span>   
               </li>
-              <li>
-                <div>
+              <li class="product_item">
+                <div class="product_picture">
                   <a href="blank.html">
                     <img src="img/product/item_2.jpg" width="360" height="380" alt="Профессиональная 
                 селфи-палка.">
                   </a>
                   <div>
-                    <button class="product_cart_button">В корзину</button>
-                    <button class="product_compare_button">Добавить к сравнению</button>
+                    <button class="product_cart_button button">В корзину</button>
+                    <button class="product_compare_button button">Добавить к сравнению</button>
                   </div>
                 </div>
-                <div>
-                  <a href="blank.html">Профессиональная <br> 
+                <div class="product_header">
+                  <a class="product_title" href="blank.html">Профессиональная <br> 
                     селфи-палка </a>
-                  <span>1500 руб</span>
+                  <span class="product_price">1500 руб</span>
                 </div>
-                <span>New</span>
+                <span class="product_new">New</span>
               </li>
-              <li>
-                <div>
+              <li class="product_item">
+                <div class="product_picture">
                   <a href="blank.html">
                     <img src="img/product/item_3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
                   </a>
                   <div>
-                    <button class="product_cart_button">В корзину</button>
-                    <button class="product_compare_button">Добавить к сравнению</button>
+                    <button class="product_cart_button button">В корзину</button>
+                    <button class="product_compare_button button">Добавить к сравнению</button>
                   </div>
                 </div>
-                <div>
-                  <a href="blank.html">Непотопляемая <br> селфи-палка</a>
-                  <span>1500 руб</span>
+                <div class="product_header">
+                  <a class="product_title" href="blank.html">Непотопляемая <br> селфи-палка</a>
+                  <span class="product_price">1500 руб</span>
                 </div>
-                <span>New</span>
+                <span class="product_new">New</span>
               </li>
-              <li>
-                <div>
+              <li class="product_item">
+                <div class="product_picture">
                   <a href="blank.html">
                     <img src="img/product/item_4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                   </a>
                   <div>
-                    <button class="product_cart_button">В корзину</button>
-                    <button class="product_compare_button">Добавить к сравнению</button>
+                    <button class="product_cart_button button">В корзину</button>
+                    <button class="product_compare_button button">Добавить к сравнению</button>
                   </div>
                 </div>
-                <div>
-                  <a href="blank.html">Селфи-палка «Следуй за <br> мной»</a>
-                  <span>1900 руб</span>
+                <div class="product_header">
+                  <a class="product_title" href="blank.html">Селфи-палка «Следуй за <br> мной»</a>
+                  <span class="product_price">1900 руб</span>
                 </div>
-                <span>New</span>
+                <span class="product_new">New</span>
               </li>
           </ul>
           <div> <!--Пагинация-->
