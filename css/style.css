@@ -6,7 +6,8 @@
     --basic_white_opacity30: rgba(255, 255, 255, 0.3);
     --basic_black_opacity30: rgba(0, 0, 0, 0.3);
     --basic_grey: #e5e5e5;
-    --basic_grey_dark: #dcdcdc;
+    --basic_grey_light: #ebebeb;
+    --basic_grey_dark: #dcdcdc;    
     --basic_dark: #363636;
 }
 
@@ -528,9 +529,11 @@ address,
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
 .filter_container {
     background-color: var(--basic_grey_dark) ;
 }
+
 .sorting_container {
     background-color: var(--basic_grey);
 }
@@ -575,9 +578,11 @@ address,
     margin-top: 20px; /* УБРАТЬ, только для наглядности*/
     background: url(../img/svg/down.svg) no-repeat center;
 }
+
 .minmax_item label {
     opacity: 0.2;
 }
+
 .minmax_item input:checked + label {
     opacity: 1;    
 }
@@ -591,9 +596,11 @@ address,
 	line-height: 17px; 
     letter-spacing: 0.1em;
 }
+
 .filtration_block {
     background-color: var(--basic_grey); 
 }
+
 .filtration_block_price {
     font-family: 'Gilroy', "Arial", sans-serif;
     font-weight: 300;
@@ -602,12 +609,14 @@ address,
     border: none;
     background-color: transparent;
 }
+
 .fieldset_list {
     font-family: "OpenSans", "Arial", sans-serif;
     font-weight: 300;
 	font-size: 14px;
 	line-height: 19px;
 }
+
 /*
 .filtration_button {
     font-family: 'gilroyextrabold', sans-serif;
@@ -622,9 +631,11 @@ address,
 .filtration_button:hover {
     background-color: var(--special_yellow_dark);
 }
+
 .filtration_button:active {
-    color: var(--basic_black_opacity30);   
+    color: var(--basic_grey);   
 }
+
 /*
 .product_cart_button {
     font-family: 'gilroyextrabold', sans-serif;
@@ -669,3 +680,21 @@ address,
 .product_price {
     font-weight: 300;
 }
+
+.product_pagination {
+    background-color: var(--basic_grey_light);
+    font-family: 'Gilroy', "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+	line-height: 20px; 
+    letter-spacing: 0.1em;
+}
+
+.pagination_button {
+    color: var(--basic_black_opacity30);
+}
+
+.pagination_button_active {
+    color: var(--basic_black);
+}
+
