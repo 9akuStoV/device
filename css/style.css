@@ -502,6 +502,12 @@ address,
 /* catalog.html */
 /* main */
 
+.bread_crumps_container {
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .bread_crumbs_list {
     font-size: 15px;
     line-height: 20px;
@@ -520,6 +526,16 @@ address,
 }
 
 /* Первая полоса*/
+
+.filter_sorting_container,
+.filtration_block_container {
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
 .filter_title,
 .sorting_title {
     font-family: 'Gilroy', "Arial", sans-serif;
@@ -670,6 +686,12 @@ address,
 }
 
 /* Каталог товаров*/
+
+.product_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
 
 .product_title,
 .product_price{
