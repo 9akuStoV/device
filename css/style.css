@@ -99,9 +99,15 @@ body{
 
 .header_page {
     width: 1160px;
-    background: var(--special_yellow);
+    background: linear-gradient(var(--basic_white) 40px, var(--special_yellow) 40px);
     margin-left: auto;
     margin-right: auto;
+}
+
+.header_logo svg{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 60px;
 }
 
 .header_logo:hover {
@@ -423,18 +429,11 @@ body{
     margin-top: 95px;
 }
 
-.service_radio label:hover {
-    background-color: var(--special_yellow_dark);
+.service_button:active {
+    background: var(--basic_black);
+    color: var(--special_yellow); 
 }
 
-.service_radio input:checked + label {
-    color:  var(--special_yellow);
-    background-color: var(--basic_black);
-}
-
-.service_radio input {
-    display: none;
-}
 
 .service_text {
     font-family: 'opensans', sans-serif;
@@ -567,6 +566,7 @@ body{
 }
 
 .logo_footer {
+    color: var(--special_yellow_dark);
     margin-top: 65px;
 }
 
@@ -578,7 +578,7 @@ body{
     opacity: 0.3;
 }
 
-address, 
+.footer_address, 
 .footer_phone_number, 
 .footer_phone_number a {
     color: var(--basic_white);
@@ -611,13 +611,13 @@ address,
 }
 
 .footer_2 {
-   /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px; */
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 65px;
-    
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    margin-bottom: 65px;    
+}
+
+.footer_address {
+    text-align: left;
 }
 
 .footer_nav_list {
@@ -628,7 +628,8 @@ address,
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin-top: 0;
-    display: flex;    
+    display: flex; 
+    justify-content: center;   
 }
 
 .footer_nav_item:not(:last-child) {
@@ -637,6 +638,7 @@ address,
 
 .footer_phone_number {
     margin-top: 0;
+    text-align: right;
 }
 
 .footer_nav_item a {
@@ -644,16 +646,24 @@ address,
 }
 
 .footer_3 {
-    /*display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;   */ 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
     margin-bottom: 65px;
+}
+
+.footer_line {
+    color: var(--special_yellow_dark);
+}
+
+.academy {
+    display: flex;
+    margin-left: auto; /*Не сработал?!*/
+    justify-content: flex-end;
 }
 
 .social_list{
     display: flex;
+    margin: 0 auto;
 }
 
 .social_item:not(:last-child) {
