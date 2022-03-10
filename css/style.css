@@ -56,6 +56,12 @@ li {
     list-style-type: none; /* Убираем маркеры */
 }
 
+.no_left_pad {
+    padding-left: 0; 
+    margin-top: 0;
+    margin-bottom: 0;/* Убираем отступы у списков */
+}
+
 .visually_hidden {
     display: none;
 }
@@ -244,8 +250,17 @@ body{
 }
 
 .header_menu_item:first-child {
+    margin-right: 20px;
+}
+
+.header_menu_list .header_menu_login {
     margin-right: auto;
 }
+
+.header_menu_item:first-child + .header_menu_login a {
+    opacity: 0.3;
+}
+
 
 .header_menu_item:hover,
 .catalog_item:hover,
@@ -281,6 +296,18 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 115px;
+    position: relative;
+}
+
+.slider_pagination {
+    position: absolute;
+    right: 160px;
+    top: 290px;
+    display: flex;
+}
+
+.slider_pagination_item:not(:last-child) {
+    margin-right: 18px;
 }
 
 .slider_item {
@@ -340,7 +367,7 @@ body{
     margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 40px;
     padding: 0;
 }
 
@@ -697,6 +724,10 @@ body{
 /* catalog.html */
 /* main */
 
+.catalog_title {
+    margin-bottom: 30px;
+}
+
 .bread_crumps_container {
     width: 1160px;
     margin-left: auto;
@@ -704,8 +735,14 @@ body{
 }
 
 .bread_crumbs_list {
+    display: flex;
     font-size: 15px;
     line-height: 20px;
+    margin-bottom: 50px;
+}
+
+.bread_crumbs_item:not(:last-child) {
+    margin-right: 40px;
 }
 
 .bread_crumbs_item {
@@ -728,7 +765,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 330px 2fr;
 }
 
 .filter_title,
@@ -741,15 +778,24 @@ body{
     text-transform: uppercase;
 }
 
+.filter_container,
+.sorting_container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+}
+
 .filter_container {
     background-color: var(--basic_grey_dark) ;
 }
 
 .sorting_container {
     background-color: var(--basic_grey);
+    display: flex;
 }
 
 .sorting_list{
+    display: flex;
     font-family: "OpenSans", "Arial", sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -770,6 +816,10 @@ body{
 
 .sorting_item input {
     display: none;
+}
+
+.minmax_list {
+    display: flex;
 }
 
 .minmax_item input {
@@ -859,12 +909,15 @@ body{
     border: none;
     background-color: transparent;
 }*/
+
 .product_cart_button:hover {
     background-color: var(--special_yellow_dark);
 }
+
 .product_cart_button:active {
     color: var(--basic_black_opacity30);   
 }
+
 .product_compare_button {
     font-family: 'OpenSans', sans-serif;
 	font-size: 13px;

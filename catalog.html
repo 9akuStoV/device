@@ -27,8 +27,8 @@
           <li class="header_menu_item">
             <a href="blank.html">Валентин Петухов</a>
           </li>
-          <li class="header_menu_item">
-            <a href="blank.html">Войти</a>
+          <li class="header_menu_item header_menu_login">
+            <a href="blank.html">Выйти</a>
           </li>
           <li class="header_menu_item">
             <a href="blank.html">Сравнить</a>
@@ -41,14 +41,20 @@
       <nav class="header_nav_menu">
         <div class="nav_catalog">
           <a class="catalog_header" href="catalog.html">Каталог товаров</a>
-          <ul class="catalog_list">  <!--Выпадающий каталог-->
-            <li><a class="catalog_item" href="blank.html">Виртуальная реальность</a></li>
-            <li><a class="catalog_item" href="blank.html">Моноподы для селфи</a></li>
-            <li><a class="catalog_item" href="blank.html">Экшн-камеры</a></li>
-            <li><a class="catalog_item" href="blank.html">Фитнес-браслеты</a></li>
-            <li><a class="catalog_item" href="blank.html">Умные часы</a></li>
-            <li><a class="catalog_item" href="blank.html">Квадрокоптер</a></li>          
-          </ul>
+          <div class="catalog_list">  <!--Выпадающий каталог-->
+            <ul class="catalog_column">
+              <li><a class="catalog_item" href="blank.html">Виртуальная реальность</a></li>
+              <li><a class="catalog_item" href="blank.html">Моноподы для селфи</a></li>
+              <li><a class="catalog_item" href="blank.html">Экшн-камеры</a></li>
+            </ul>
+            <ul class="catalog_column">
+              <li><a class="catalog_item" href="blank.html">Фитнес-браслеты</a></li>
+              <li><a class="catalog_item" href="blank.html">Умные часы</a></li>
+            </ul>
+            <ul class="catalog_column">
+              <li><a class="catalog_item" href="blank.html">Квадрокоптер</a></li> 
+            </ul>         
+          </div>
         </div>
         <ul class="nav_list">
           <li><a class="nav_item" href="blank.html">Доставка</a></li>
@@ -60,7 +66,7 @@
     <main>
       <div class="bread_crumps_container">
       <h1 class="catalog_title">Моноподы для селфи</h1>
-        <ul class="bread_crumbs_list"> <!--Хлебные крошки-->
+        <ul class="bread_crumbs_list no_left_pad"> <!--Хлебные крошки-->
           <li class="bread_crumbs_item">
               <a href="index.html">
                 Главная            
@@ -90,7 +96,7 @@
           <div class="sorting_container">
             <span class="sorting_title">Сортировка:</span>
             <div> 
-              <ul class="sorting_list">
+              <ul class="sorting_list no_left_pad">
                 <li class="sorting_item">
                   <input class="sorting_radio_button" checked type="radio" name="sorting_radio" value="price" id="sorting_radio_1_id" checked>
                   <label class="sorting_radio_label" for="sorting_radio_1_id">По цене</label>
@@ -106,7 +112,7 @@
               </ul>   
             </div>
             <div class="minmax_block"> 
-              <ul class="minmax_list">
+              <ul class="minmax_list no_left_pad">
                 <li class="minmax_item">
                   <input checked type="radio" name="minmax_radio" value="up" id="minmax_radio_1_id" checked>
                   <label for="minmax_radio_1_id"></label>
@@ -183,7 +189,7 @@
         </div>
         <div class="product_block"> <!--Блок с товарами-->
           <h2 class="visually_hidden">Список товаров</h2>
-          <ul class="product_list">
+          <ul class="product_list no_left_pad">
               <li class="product_item">
                 <div class="product_picture">
                   <a href="blank.html">
