@@ -66,7 +66,7 @@ li {
     display: none;
 }
 
-body{
+body {
 	margin: 0;
   	font-family: "OpenSans", "Arial", sans-serif;
     font-weight: 300;
@@ -778,6 +778,10 @@ body{
     text-transform: uppercase;
 }
 
+.sorting_title {
+    margin-right: 75px;
+}
+
 .filter_container,
 .sorting_container {
     padding-top: 25px;
@@ -796,13 +800,18 @@ body{
 
 .sorting_list{
     display: flex;
+    flex-wrap: wrap;
     font-family: "OpenSans", "Arial", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
 }
 
-.sorting_item label{
+.sorting_item {
+    margin-right: 30px;
+}
+
+.sorting_item label {
     opacity: 0.3;
 }
 
@@ -818,27 +827,33 @@ body{
     display: none;
 }
 
+.minmax_block {
+    margin-left: auto;
+}
+
 .minmax_list {
     display: flex;
+}
+
+.minmax_item {
+    margin-left: 20px;
 }
 
 .minmax_item input {
     display: none;
 }
 
-.minmax_item:nth-child(1) label {
+.minmax_item:first-child label {
     display: block;
     width: 10px;
     height: 10px;
-    margin-top: 20px; /* УБРАТЬ, только для наглядности*/
     background: url(../img/svg/up.svg) no-repeat center;
 }
 
-.minmax_item:nth-child(2) label {
+.minmax_item:last-child label {
     display: block;
     width: 10px;
     height: 10px;
-    margin-top: 20px; /* УБРАТЬ, только для наглядности*/
     background: url(../img/svg/down.svg) no-repeat center;
 }
 
