@@ -42,16 +42,16 @@
           <a class="catalog_header" href="catalog.html">Каталог товаров</a>
           
           <div class="catalog_list">  <!--Выпадающий каталог-->
-            <ul class="catalog_column">
+            <ul class="catalog_column no_list">
               <li><a class="catalog_item" href="blank.html">Виртуальная реальность</a></li>
               <li><a class="catalog_item" href="blank.html">Моноподы для селфи</a></li>
               <li><a class="catalog_item" href="blank.html">Экшн-камеры</a></li>
             </ul>
-            <ul class="catalog_column">
+            <ul class="catalog_column no_list">
               <li><a class="catalog_item" href="blank.html">Фитнес-браслеты</a></li>
               <li><a class="catalog_item" href="blank.html">Умные часы</a></li>
             </ul>
-            <ul class="catalog_column">
+            <ul class="catalog_column no_list">
               <li><a class="catalog_item" href="blank.html">Квадрокоптер</a></li> 
             </ul>         
           </div>
@@ -66,7 +66,7 @@
 
     <main>
       <h1 class="visually_hidden">Главная страница Интернет магазина «Device»</h1>
-      <section> <!--Слайдер с новинками-->
+      <section class="new"> <!--Слайдер с новинками-->
         <h2 class="visually_hidden">Новинки</h2>
         <div class="slider_list"> <!--Тут будет слайдер-->
           <div class="slider_item slider_active"> <!--Первый слайд-->
@@ -75,9 +75,15 @@
               <img src="img/product/new/slide_1.png" width="384" height="486" alt="Селфи палка.">
             </div>
             <div class="slider_block">
+              <div class="slider_line">
+                <svg width="100" height="7">
+                  <rect width="100" height="7" fill="currentColor"/>
+                </svg>
+              </div>
               <p class="slide_header">
-                Делай селфи, как Бен Стиллер! 
+                Делай селфи, <br> как Бен Стиллер! 
               </p> 
+              <span class="slider_number">01</span>
               <p class="slide_text">
                 Самая длинная палка для селфи доступна в нашем магазине. <br>
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
