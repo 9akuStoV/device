@@ -17,6 +17,7 @@ html {
     --basic_black_opacity30: rgba(0, 0, 0, 0.3);
     --basic_grey: #e5e5e5;
     --basic_grey_light: #ebebeb;
+    --basic_grey_input: #f2f2f2;
     --basic_grey_dark: #dcdcdc;    
     --basic_dark: #363636;
 }
@@ -617,8 +618,88 @@ body {
 .contact_write_to_us:hover {
     background-color: var(--special_yellow_dark);
 }
+
 .contact_write_to_us:active {
     color: var(--basic_black_opacity30);   
+}
+
+.full_map {
+    outline: 5px solid rgba(200, 200, 0, 0.7);
+    outline-offset: -5px;
+    display: none; /* Временное отключение видимости попапа*/
+    position: fixed;
+    top: 25%;
+    left: 25%;
+}
+
+.feedback {
+    display: none; /* Временное отключение видимости попапа*/
+    outline: 5px solid rgba(200, 200, 0, 0.7);
+    outline-offset: -5px;
+    position: fixed;
+    top: 120px;
+    bottom: auto;
+    right: 0;    
+    left: 0;
+    margin: 0 auto;
+    width: 960px;
+    padding: 90px 100px 70px 100px;
+    background-color: var(--basic_white);
+}
+
+.feedback_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.feedback_name_field,
+.feedback_email_field {
+    width: 360px;
+}
+
+.feedback_input {
+    width: 100%;
+}
+
+.feedback_textarea_field {
+    width: 760px;
+}
+
+.feedback_textarea {
+    width: 100%;
+    min-height: 170px;
+}
+
+.feedback_input,
+.feedback_textarea {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: var(--basic_grey_input);
+    border: none;
+}
+
+.button_close {
+    width: 55px;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 0.5;
+}
+
+.button_close:hover {
+    opacity: 1;
+}
+
+.button_close:active {
+    opacity: 0.3;
 }
 
 /* Подвальчик */
