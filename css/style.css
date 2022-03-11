@@ -1,3 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 :root{
     --special_yellow: #f7e296;
     --special_yellow_dark: #f0c52e;
@@ -56,7 +66,7 @@ li {
     list-style-type: none; /* Убираем маркеры */
 }
 
-.no_left_pad {
+.no_list {
     padding-left: 0; 
     margin-top: 0;
     margin-bottom: 0;/* Убираем отступы у списков */
@@ -217,20 +227,17 @@ body {
 .nav_catalog:hover .catalog_list {
     position: absolute;
     display: flex;
-    flex-direction: row;
+    z-index: 1;
     padding-left: 60px;    
     left: -60px;
     background-color: var(--special_yellow);
     margin: 0 auto;
-    width: 1160px;
-    box-sizing: border-box;
-    /*margin-left: auto;
-    margin-right: auto;*/ 
+    width: 1160px;    
 }
 
 .nav_list {
-    display: flex;
-    flex-direction: row;
+    display: flex; 
+    flex-wrap: wrap;  
 }
 
 .nav_list li:not(:last-child) {
@@ -242,7 +249,7 @@ body {
 
 .header_menu_list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .header_menu_item:last-child { /*Пересмотреть под каталог!!!!!*/
@@ -520,7 +527,7 @@ body {
 
 .about_contact {
     width: 1160px;
-    height: 580px;
+    min-height: 580px;
     margin-left: auto;
     margin-right: auto; 
     display: grid;
@@ -529,18 +536,19 @@ body {
     margin-bottom: 85px;
     outline: 5px solid rgba(200, 200, 0, 0.7);
     outline-offset: -5px;
+    padding-top: 60px;
 }
 
 .about,
 .contact {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .about_header,
 .contact_header {
-    margin-top: 60px;
+    margin-top: 0;
     margin-bottom: 50px;
 }
 
@@ -553,8 +561,13 @@ body {
     margin-bottom: 40px;
 }
 
+.about_text:last-of-type {
+    margin-bottom: 60px;
+}
+
 .delivery_list {
-    margin-top: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .delivery_item {
@@ -584,17 +597,19 @@ body {
 
 .footer_page {
     background-color: var(--basic_dark);
+    color: var(--basic_white);
 }
 
 .footer_container {
     width: 1160px;
     margin-left: auto;
     margin-right: auto; 
+    padding-top: 45px;
 }
 
 .logo_footer {
     color: var(--special_yellow_dark);
-    margin-top: 65px;
+    margin-top: 20px;
 }
 
 .logo_footer:hover {
@@ -608,27 +623,23 @@ body {
 .footer_address, 
 .footer_phone_number, 
 .footer_phone_number a {
-    color: var(--basic_white);
+    color: inherit;
     font-style: normal;
 }
 
 .footer_menu_item a {
-    color: var(--basic_white);
+    color: inherit
 }
 
 .footer_menu_list {
     display: flex; 
-    margin-top: 45px;   
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .footer_menu_item:not(:first-child) {
     margin-left: 40px;
 }
-
-.footer_menu_item:first-child {
-    margin-left: auto;
-}
-
 
 .footer_1 {
     display: grid;
@@ -656,6 +667,7 @@ body {
     text-transform: uppercase;
     margin-top: 0;
     display: flex; 
+    flex-wrap: wrap;
     justify-content: center;   
 }
 
@@ -669,7 +681,7 @@ body {
 }
 
 .footer_nav_item a {
-    color:  var(--basic_white);
+    color: inherit
 }
 
 .footer_3 {
@@ -684,7 +696,6 @@ body {
 
 .academy {
     display: flex;
-    margin-left: auto; /*Не сработал?!*/
     justify-content: flex-end;
 }
 
