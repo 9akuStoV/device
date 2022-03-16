@@ -21,10 +21,13 @@
         </svg>        
       </a>
       <div class="header_menu">
-        <form class="header_search_form" action="https://echo.htmlacademy.ru/courses" method="get">
-          <input class="header_search_input" type="text" name="search_form" placeholder="Поиск по сайту">  
-          <button class="header_search_button" type="submit">Найти</button>      
-        </form>
+        <div class="search">
+          <form class="header_search_form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <label class="header_search_field" for="search_input"></label>
+          <input class="header_search_input" type="search" name="search_form" id="search_input" placeholder="Поиск по сайту">           
+          <button class="header_search_button" type="submit"><span class="search_button_text">Найти</span></button>      
+          </form>
+        </div>
         <ul class="header_menu_list">
           <li class="header_menu_item header_menu_login">
             <a href="blank.html">Войти</a>
@@ -69,7 +72,7 @@
       <section class="new"> <!--Слайдер с новинками-->
         <h2 class="visually_hidden">Новинки</h2>
         <div class="slider_list"> <!--Тут будет слайдер-->
-          <div class="slider_item"> <!--Первый слайд-->
+          <div class="slider_item slider_active"> <!--Первый слайд-->
             <h3 class="visually_hidden">Селфи-палки</h3>
             <div class="slider_picture">
               <img src="img/product/new/slide_1.png" width="384" height="486" alt="Селфи палка.">
@@ -115,7 +118,7 @@
               </dl>
             </div>
           </div>
-          <div class="slider_item slider_active"> <!--Третий слайд-->
+          <div class="slider_item"> <!--Третий слайд-->
             <h3 class="visually_hidden">Квадракоптер</h3>
             <div class="slider_picture">
               <img src="img/product/new/slide_3.png" width="526" height="334" alt="Квадрокоптер.">
@@ -138,15 +141,15 @@
               </dl>
             </div>
           </div>
-          <ul class="slider_pagination"> <!--Пагинация ПЕРЕДЕЛАТЬ НА КНОПКИ-->
+          <ul class="slider_pagination no_list"> <!--Пагинация ПЕРЕДЕЛАТЬ НА КНОПКИ-->
             <li class="slider_pagination_item">
-              <input type="radio" name="slyder" value="slyde-1" id="slyde-1-id" checked>
+              <button class="slider_button slider_button_active" type="submit"></button>
             </li>
             <li class="slider_pagination_item">
-              <input type="radio" name="slyder" value="slyde-2" id="slyde-2-id">
+              <button class="slider_button" type="submit"></button>
             </li>
             <li class="slider_pagination_item">
-              <input type="radio" name="slyder" value="slyde-3" id="slyde-3-id">
+              <button class="slider_button" type="submit"></button>
             </li>       
           </ul>
         </div>
@@ -294,12 +297,13 @@
       </section>
 
       <section class="service"> <!--Услуги-->
-        <div class="service_container">
+        <div class="service_back">
+          <div class="service_container">
           <h2 class="visually_hidden">Услуги</h2>
           <div class="service_slider"> <!--Слайдер услуг-->
             <ul class="service_pag_list no_list"> 
               <li class="service_pag_item">
-                <button class="service_button button" type="button">Доставка</button>
+                <button class="service_button button service_button_active" type="button">Доставка</button>
               </li>
               <li class="service_pag_item">
                 <button class="service_button button" type="button">Гарантия</button>
@@ -329,7 +333,8 @@
                 условия кредита. Выгодные для нашего банка, разумеется.</p>                
             </div>
           </div>
-        </div>  
+          </div>
+        </div>
       </section>
 
       <section class="brand"> <!--Бренды-->
@@ -407,13 +412,13 @@
               </svg>              
             </a>
             <ul class="footer_menu_list no_list">
-              <li class="footer_menu_item">
+              <li class="footer_menu_item header_menu_login">
                 <a href="blank.html">Войти</a>
               </li>
-              <li class="footer_menu_item">
+              <li class="footer_menu_item header_menu_compare">
                 <a href="blank.html">Сравнить</a>
               </li>
-              <li class="footer_menu_item">
+              <li class="footer_menu_item header_menu_cart">
                 <a href="blank.html">Корзина</a>
               </li>              
             </ul>          
