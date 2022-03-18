@@ -137,7 +137,7 @@
       <div class="filtration_block_container">
         <div class="filtration_block"> <!--Блок с фильтром товаров-->
         <h2 class="visually_hidden">Фильтр товаров</h2>
-        <form method="get" action="https://echo.htmlacademy.ru">
+        <form class="filtration_form" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
                 <legend class="filtration_legend">Стоимость</legend>
                 <div> <!--Обёртка-->
@@ -155,38 +155,38 @@
             </fieldset>
           <fieldset>
             <legend class="filtration_legend">Цвет</legend>
-            <ul class="fieldset_list">
-                <li>
-                    <input type="checkbox" name="black" id="black_id" checked>
+            <ul class="fieldset_list no_list">
+                <li class="fieldset_item">
+                    <input class="visually_hidden fieldset_checkbox" type="checkbox" name="black" id="black_id" checked>
                     <label for="black_id" >Чёрный</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="white" id="white_id">
+                <li class="fieldset_item">
+                    <input class="visually_hidden fieldset_checkbox" type="checkbox" name="white" id="white_id">
                     <label for="white_id">Белый</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="blue" id="blue_id" checked>
+                <li class="fieldset_item">
+                    <input class="visually_hidden fieldset_checkbox" type="checkbox" name="blue" id="blue_id" checked>
                     <label for="blue_id" >Синий</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="red" id="red_id" checked>
+                <li class="fieldset_item">
+                    <input class="visually_hidden fieldset_checkbox" type="checkbox" name="red" id="red_id" checked>
                     <label for="red_id" >Красный</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="pink" id="pink_id">
+                <li class="fieldset_item">
+                    <input class="visually_hidden fieldset_checkbox" type="checkbox" name="pink" id="pink_id">
                     <label for="pink_id" >Розовый</label>
                 </li>
             </ul>
             </fieldset>
             <fieldset>
               <legend class="filtration_legend">Bluetooth</legend>
-              <ul class="fieldset_list">
-                  <li>
-                    <input type="radio" name="bluetooth_filter" id="have_bt" value="have_blutooth" checked>
+              <ul class="fieldset_list no_list">
+                  <li class="fieldset_item">
+                    <input class="visually_hidden fieldset_radio" type="radio" name="bluetooth_filter" id="have_bt" value="have_blutooth" checked>
                     <label for="have_bt">Есть</label>
                   </li>
-                  <li>
-                    <input type="radio" name="bluetooth_filter" id="havent_bt" value="havent_blutooth">
+                  <li class="fieldset_item">
+                    <input class="visually_hidden fieldset_radio" type="radio" name="bluetooth_filter" id="havent_bt" value="havent_blutooth">
                     <label for="havent_bt">Нет</label>
                   </li>
                 </ul>
@@ -261,10 +261,10 @@
               </li>
           </ul>
           <div class="product_pagination"> <!--Пагинация-->
-            <a class="pagination_button pagination_button_active" href="#">Назад</a>
+            <a class="pagination_button_back" href="#"><span>Назад</span></a>
             <ul class="pagination_list no_list">
               <li class="pagination_item">
-                <a class="pagination_button pagination_button_active">1</a>
+                <a class="pagination_button_active">1</a>
               </li>
               <li class="pagination_item">
                 <a class="pagination_button" href="#">2</a>
@@ -273,7 +273,7 @@
                 <a class="pagination_button" href="#">3</a>
               </li>
             </ul>  
-            <a class="pagination_button pagination_button_active" href="#">Вперед</a>
+            <a class="pagination_button_forward" href="#"><span>Вперед</span></a>
         </div>
         </div>
       </div>
