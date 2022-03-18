@@ -1333,7 +1333,6 @@ body {
     left: 0;
 }
 
-
 .product_compare_button {
     font-family: 'OpenSans', sans-serif;
 	font-size: 13px;
@@ -1357,6 +1356,24 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
+    row-gap: 50px;
+    margin-bottom: 40px;
+}
+
+.product_header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.product_new::before {    
+    content: "";
+    width: 62px;
+    height: 62px;
+    background-image: url(../img/svg/new.svg);
+    position: absolute;
+    top: 50px;
+    right: 30px;
 }
 
 .product_title,
@@ -1376,6 +1393,19 @@ body {
     font-size: 16px;
 	line-height: 20px; 
     letter-spacing: 0.1em;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.pagination_list {
+    display: flex;
+}
+
+.pagination_item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .pagination_button {
