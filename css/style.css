@@ -130,7 +130,7 @@ body {
 .header_logo {
     display: inline-block; /* Ссылка не блочный элемент поэтому нельзя толкать от верха и низа*/
     margin-top: -20px;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 
 }
 
@@ -146,7 +146,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
 }
 
 .header_search_form {
@@ -162,8 +162,8 @@ body {
     position: absolute; 
     z-index: 1;
     left: 60px;
-    top: 63px;
-    width: 20px;  
+    top: 45px;
+    width: 14px;  
     height: 20px;  
     background: url(../img/svg/search.svg) no-repeat 50% 50%;    
 }
@@ -242,6 +242,10 @@ body {
     margin-bottom: 35px; 
 }
 
+.nav_list {
+    padding-left: 10px;
+}
+
 .catalog_list {
     padding-left: 0; 
     display: none;
@@ -278,7 +282,7 @@ body {
 }
 
 .nav_list li:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 35px;
 }
 .nav_list li:last-child {
     margin-left: auto;
@@ -388,7 +392,7 @@ body {
     width: 1160px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 115px;
+    margin-bottom: 100px;
     position: relative;
     margin-top: -130px;
 }
@@ -400,7 +404,8 @@ body {
 }
 
 .slider_block {
-    padding-top: 25px; /*ИСПРАВИТЬ после корректировки отступов slider_line*/
+    padding-top: 35px; 
+    padding-left: 10px;
 }
 
 .slide_header,
@@ -432,7 +437,7 @@ body {
     font-size: 180px;
 	line-height: 220px;
     position: absolute;
-    right: 60px;
+    right: 48px;
     top: -15px;    
 }
 
@@ -442,8 +447,8 @@ body {
 
 .slider_pagination {
     position: absolute;
-    right: 160px;
-    top: 340px;
+    right: 89px;
+    top: 336px;
     display: flex;
 }
 
@@ -482,7 +487,7 @@ body {
 
 .slide_text,
 .slide_button {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .slide_description {
@@ -493,6 +498,7 @@ body {
 }
 
 .slide_description dt {
+    padding-top: 15px;
     font-size: 13px;
 	line-height: 15px;   
 }
@@ -507,7 +513,7 @@ body {
 /* Категории товаров */
 
 .popular {
-    margin-bottom: 85px;  
+    margin-bottom: 65px;  
 }
 
 .popular_list {
@@ -531,7 +537,8 @@ body {
     background: var(--special_yellow);
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;  
+    margin-bottom: 39px;  
 }
 
 .popular_header {
@@ -559,7 +566,7 @@ body {
 /* Услуги */
 
 .service {
-    padding-top: 115px;
+    padding-top: 100px;
 }
 
 .service_back {
@@ -606,25 +613,27 @@ body {
     letter-spacing: 0.1em;
 }
 
+.service_slider {
+    padding-top: 15px;
+}
+
 .service_pag_list {
-    width: 280px;
-    padding-top: 95px;
+    width: 282px;
+    padding-top: 80px;
+
     padding-bottom: 75px;
     border-right: var(--basic_black) 7px solid;
 }
+
+.service_pag_item {
+    margin-bottom: 22px;
+}
+
 .service_button {
     width: 160px;
     margin-bottom: 10px;
 }
-/*
-.service_button:active {
-    border: none;
-    padding-right: 120px;
-    width: 280px; 
-    background: var(--basic_black);
-    color: var(--special_yellow); 
-}
-*/
+
 .service_button_active,
 .service_button_active:hover {
     order: none;
@@ -643,10 +652,12 @@ body {
 
 .service_item {
     display: none;
+    padding-top: 86px;
+    padding-left: 6px;
 }
 
 .service_item_atcive {
-    padding-top: 95px;
+    
     display: block;
 }
 
@@ -713,10 +724,14 @@ body {
     flex-wrap: wrap;
 }
 
+.contact {
+    padding-left: 10px;
+}
+
 .about_header,
 .contact_header {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 38px;
 }
 
 .about_header::before,
@@ -735,11 +750,11 @@ body {
 	font-size: 15px;
 	line-height: 30px;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
 }
 
 .about_text:last-of-type {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
 }
 
 .delivery_list {
@@ -756,11 +771,13 @@ body {
     font-weight: 800;
 	font-size: 16px;
 	line-height: 28px;
-    padding-left: 25px; 
+    padding-left: 17px; 
+    margin-bottom: 15px;
 }
 
 .about_button,
 .contact_button {
+    padding: 0;
     margin-top: auto;
     width: 260px;
 }
@@ -914,7 +931,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    margin-bottom: 40px;    
+    margin-bottom: 34px;    
 }
 
 .footer_menu_item:first-child {
@@ -962,7 +979,7 @@ body {
 .footer_2 {
     display: grid;
     grid-template-columns: 250px 1fr 250px;
-    margin-bottom: 65px;    
+    margin-bottom: 53px;    
 }
 
 .footer_address {
@@ -1002,6 +1019,7 @@ body {
 }
 
 .footer_line {
+    margin-top: 13px;
     width: 80px;
     height: 7px;
     background-color: var(--special_yellow_dark);
@@ -1384,6 +1402,7 @@ body {
 .product_picture {
     width: 360px;
     height: 380px;
+    object-fit: contain;
 }
 
 .product_picture:hover {
