@@ -576,8 +576,6 @@ body {
 }
 
 .service_container {
-    outline: 5px solid rgba(200, 200, 0, 0.7);
-    outline-offset: -5px;
     width: 1160px;
     height: 400px;
     margin-left: auto;
@@ -620,7 +618,6 @@ body {
 .service_pag_list {
     width: 282px;
     padding-top: 80px;
-
     padding-bottom: 75px;
     border-right: var(--basic_black) 7px solid;
 }
@@ -634,11 +631,12 @@ body {
     margin-bottom: 10px;
 }
 
+.service_button:active,
 .service_button_active,
 .service_button_active:hover {
-    order: none;
+    border: none;
     padding-right: 120px;
-    width: 280px; 
+    width: 275px; 
     background: var(--basic_black);
     color: var(--special_yellow); 
 }
@@ -656,8 +654,7 @@ body {
     padding-left: 6px;
 }
 
-.service_item_atcive {
-    
+.service_item_atcive {    
     display: block;
 }
 
