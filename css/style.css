@@ -95,13 +95,14 @@ body {
     font-weight: 800;
 	font-size: 18px;
 	line-height: 22px;
-    width: 220px;
+    min-width: 220px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;    
     border-style: none;
     padding-top: 9px;
     padding-bottom: 9px;
+    /*padding: 9px 10px;*/
     background: linear-gradient(transparent 40%, var(--special_yellow_dark) 40% 60%, transparent 40%);
 }
 
@@ -293,6 +294,10 @@ body {
     flex-wrap: wrap;
 }
 
+.header_menu_item a {
+    display: flex;
+}
+
 .header_menu_item:last-child { /*Пересмотреть под каталог!!!!!*/
     margin-left: 40px;
 }
@@ -305,7 +310,7 @@ body {
     margin-right: auto;    
 }
 
-.header_menu_login a::before {  /*Оставлено для вопроса о поведении элемента*/
+.header_menu_item:first-child a::before {  /*Оставлено для вопроса о поведении элемента*/
     content: "";
     display: inline-block;  
     width: 20px;  
@@ -313,29 +318,17 @@ body {
     background: url(../img/svg/login.svg) no-repeat 50% 50%;    
 }
 
-.header_menu_compare {
-    position: relative;
-    padding-left: 20px;
-}
-
 .header_menu_compare a::before {  
     content: "";
-    position: absolute; 
-    left: 0;
+    display: inline-block;  
     width: 20px;  
     height: 20px;  
     background: url(../img/svg/compare.svg) no-repeat 50% 50%;    
 }
 
-.header_menu_cart {
-    position: relative;
-    padding-left: 20px;
-}
-
 .header_menu_cart a::before {  
     content: "";
-    position: absolute; 
-    left: 0;
+    display: inline-block;  
     width: 20px;  
     height: 20px;  
     background: url(../img/svg/cart.svg) no-repeat 50% 50%;    
@@ -476,7 +469,6 @@ body {
     display: none;
     grid-template-columns: 1fr 1fr;
     padding-left: 60px;
-    padding-right: 60px;
     column-gap: 20px;
     margin-bottom: 50px; /*Дежурный отступ, убрать*/
 }
@@ -719,6 +711,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .contact {
@@ -776,7 +769,7 @@ body {
 .contact_button {
     padding: 0;
     margin-top: auto;
-    width: 260px;
+    min-width: 260px;
 }
 
 /* Контакты */
@@ -910,7 +903,8 @@ body {
 }
 
 .footer_menu_item a {
-    color: inherit
+    color: inherit;
+    display: flex;
 }
 
 .footer_menu_list {
@@ -931,43 +925,26 @@ body {
     margin-bottom: 34px;    
 }
 
-.footer_menu_item:first-child {
-    position: relative;
-    padding-left: 20px;
-}
-
 .footer_menu_item:first-child a::before {  
     content: "";
-    position: absolute; 
-    left: 0;
+    display: inline-block;  
     width: 20px;  
     height: 20px;  
     background: url(../img/svg/icon_user_footer.svg) no-repeat 50% 50%;    
 }
 
-.footer_menu_compare {
-    position: relative;
-    padding-left: 20px;
-}
 
 .footer_menu_compare a::before {  
     content: "";
-    position: absolute; 
-    left: 0;
+    display: inline-block;  
     width: 20px;  
     height: 20px;  
     background: url(../img/svg/compare_footer.svg) no-repeat 50% 50%;    
 }
 
-.footer_menu_cart {
-    position: relative;
-    padding-left: 20px;
-}
-
 .footer_menu_cart a::before {  
     content: "";
-    position: absolute; 
-    left: 0;
+    display: inline-block;  
     width: 20px;  
     height: 20px;  
     background: url(../img/svg/icon_cart_footer.svg) no-repeat 50% 50%;    
@@ -1373,17 +1350,6 @@ body {
     color: var(--basic_grey);   
 }
 
-/*
-.product_cart_button {
-    font-family: 'gilroyextrabold', sans-serif;
-	font-size: 18px;
-	line-height: 22px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    border: none;
-    background-color: transparent;
-}*/
-
 .product_cart_button:hover {
     background-color: var(--special_yellow_dark);
 }
@@ -1402,24 +1368,24 @@ body {
     object-fit: contain;
 }
 
-.product_picture:hover {
+.product_item:hover .product_picture {
     opacity: 0.7;
 }
 
 .product_button_block {
-    width: 360px;
+    width: 100%;
     height: 380px;
     display: none;
-}
-
-.product_picture:hover + .product_button_block{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.product_item:hover .product_picture + .product_button_block{
+    display: flex;
 }
 
 .product_compare_button {
