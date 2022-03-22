@@ -448,7 +448,7 @@ body {
 .slider_pagination {
     position: absolute;
     right: 89px;
-    top: 336px;
+    bottom: 150px;
     display: flex;
 }
 
