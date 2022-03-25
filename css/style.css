@@ -100,9 +100,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.2em;    
     border-style: none;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    /*padding: 9px 10px;*/
+    padding: 9px 10px;
     background: linear-gradient(transparent 40%, var(--special_yellow_dark) 40% 60%, transparent 40%);
 }
 
@@ -482,7 +480,12 @@ body {
     margin-bottom: 50px;
 }
 
+.slide_button {
+    display: inline-block;
+}
+
 .slide_description {
+    margin-top: 0px;
     font-family: 'Gilroy', "Arial", sans-serif;
     font-weight: 300;
     letter-spacing: 0.1em;
@@ -767,7 +770,6 @@ body {
 
 .about_button,
 .contact_button {
-    padding: 0;
     margin-top: auto;
     min-width: 260px;
 }
