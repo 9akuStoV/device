@@ -138,21 +138,31 @@
         <div class="filtration_block"> <!--Блок с фильтром товаров-->
         <h2 class="visually_hidden">Фильтр товаров</h2>
         <form class="filtration_form" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
-                <legend class="filtration_legend">Стоимость</legend>
-                <div> <!--Обёртка-->
-                  <input type="hidden" name="Min_price">
-                  <input type="hidden" name="Max_price">
-                  <div> <!--Сама полоска стоимости-->
-                    <button class="filtration_block_price">
-                      <span>От 0</span>
-                    </button>
-                    <button class="filtration_block_price">
-                      <span>до 5000</span>
-                    </button>
-                  </div>
+
+
+
+          <fieldset>
+            <legend class="filtration_legend">Стоимость</legend>
+            <div class="range_filter">
+              <div class="range_control">
+                <div class="scale"> <!--Полная шкала-->
+                  <div class="bar"></div> <!--Выбранный диапазон-->
                 </div>
-            </fieldset>
+                <div class="toggle toggle_min"></div>
+                <div class="toggle toggle_max"></div>
+              </div>
+              <div class="price_control">
+                <label>
+                  от <input type="number" name="min_price" value="0">
+                </label>
+                <label>
+                  до <input type="number" name="max_price" value="5000">
+                </label>
+              </div>
+            </div>
+
+        </fieldset>
+      
           <fieldset>
             <legend class="filtration_legend">Цвет</legend>
             <ul class="fieldset_list no_list">
@@ -200,12 +210,12 @@
               <li class="product_item">
                 <div class="product_picture">
                   <a href="blank.html">
-                    <img src="img/product/item_1.jpg" width="360" height="380" alt="Любительская селфи-палка.">
+                    <img src="img/product/item_1.jpg" width="360" height="380" alt="Селфи палка с телефоном">
                   </a>                  
                 </div>
                 <div class="product_button_block">
-                  <button class="product_cart_button button">В корзину</button>
-                  <button class="product_compare_button">Добавить к сравнению</button>
+                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину любительскую селфи-палку">В корзину</button>
+                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению любительскую селфи-палку">Добавить к сравнению</button>
                 </div>
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Любительская селфи-палка</a>
@@ -215,13 +225,12 @@
               <li class="product_item">
                 <div class="product_picture">
                   <a href="blank.html">
-                    <img src="img/product/item_2.jpg" width="360" height="380" alt="Профессиональная 
-                селфи-палка.">
+                    <img src="img/product/item_2.jpg" width="360" height="380" alt="Чёрная селфи-палка">
                   </a>
                 </div>
                 <div class="product_button_block">
-                  <button class="product_cart_button button">В корзину</button>
-                  <button class="product_compare_button">Добавить к сравнению</button>
+                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину профессиональную селфи-палку">В корзину</button>
+                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению профессиональную селфи-палку">Добавить к сравнению</button>
                 </div>
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Профессиональная <br> 
@@ -232,12 +241,12 @@
               <li class="product_item">
                 <div class="product_picture">
                   <a href="blank.html">
-                    <img src="img/product/item_3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
+                    <img src="img/product/item_3.jpg" width="360" height="380" alt="Чёрно-жёлтая селфи-палка с камерой">
                   </a>                  
                 </div>
                 <div class="product_button_block">
-                  <button class="product_cart_button button">В корзину</button>
-                  <button class="product_compare_button">Добавить к сравнению</button>
+                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину непотопляемую селфи-палку">В корзину</button>
+                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению непотопляемую селфи-палку">Добавить к сравнению</button>
                 </div>
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Непотопляемая <br> селфи-палка</a>
@@ -247,12 +256,12 @@
               <li class="product_item product_new">
                 <div class="product_picture">
                   <a href="blank.html">
-                    <img src="img/product/item_4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                    <img src="img/product/item_4.jpg" width="360" height="380" alt="Селфи-палка в виде руки">
                   </a>
                 </div>
                 <div class="product_button_block">
-                  <button class="product_cart_button button">В корзину</button>
-                  <button class="product_compare_button">Добавить к сравнению</button>
+                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину селфи-палку «Следуй за мной»">В корзину</button>
+                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению селфи-палку «Следуй за мной»">Добавить к сравнению</button>
                 </div>
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Селфи-палка «Следуй за <br> мной»</a>

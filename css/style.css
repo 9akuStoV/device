@@ -21,6 +21,7 @@ html {
     --basic_grey_pag: #d9d9d9;
     --basic_grey_dark: #dcdcdc;    
     --basic_dark: #363636;
+    --special_green: #91C92F;
 }
 
 @font-face{
@@ -75,9 +76,17 @@ li {
 }
 
 .visually_hidden {
-    display: none;    
-}
-
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 body {
 	margin: 0;
   	font-family: "OpenSans", "Arial", sans-serif;
@@ -622,7 +631,7 @@ body {
 }
 
 .service_button {
-    width: 160px;
+    min-width: 160px;
     margin-bottom: 10px;
 }
 
@@ -630,10 +639,15 @@ body {
 .service_button_active,
 .service_button_active:hover {
     border: none;
-    padding-right: 120px;
-    width: 275px; 
+    padding-right: 115px;
+    width: 275px;
     background: var(--basic_black);
     color: var(--special_yellow); 
+}
+
+.service_button:active::after {
+    content: "";
+    width: 10px;
 }
 
 .service_text {
@@ -1252,6 +1266,73 @@ body {
     margin-bottom: 30px;
 }
 
+.range_filter {
+    width: 200px;
+}
+
+.range_control {
+    padding-top: 9px;
+    height: 20px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.range_control .scale {
+    height: 2px;
+    background-color: var(--basic_black_opacity30);
+}
+
+.range_control .bar {
+    height: 2px;
+    width: 70%;
+    background-color: var(--special_green);   
+}
+
+.toggle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: content-box;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--basic_white);
+    background-color: var(--basic_grey_dark);
+    border-radius: 50%;    
+    box-shadow: 0 2px 1px 0 var(--basic_grey_dark);
+    cursor: pointer;
+}
+
+.toggle_min {
+    left: 0px;
+}
+
+.toggle_max {
+    left: 130px;
+}
+
+.price_control {    
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_control label {    
+    font-family: 'Gilroy', "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+	line-height: 16px;
+    border: none;
+    background-color: transparent;
+}
+
+.price_control input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 60px;
+    border: none;
+    background-color: transparent;
+}
+
 .filtration_block {
     background-color: var(--basic_grey); 
     grid-column: 2;
@@ -1283,7 +1364,12 @@ body {
     margin-bottom: 20px;       
 }
 
-.fieldset_item:hover {
+.fieldset_checkbox:focus + label,
+.fieldset_checkbox:hover + label,
+.fieldset_radio:hover + label,
+.fieldset_radio:focus + label/*,
+.fieldset_item:hover,
+.fieldset_item:focus */{
     opacity: 0.6;      
 }
 
