@@ -798,29 +798,21 @@ body {
     color: var(--basic_black_opacity30);   
 }
 
-.full_map {
-    outline: 5px solid rgba(200, 200, 0, 0.7);
-    outline-offset: -5px;
-    display: none; /* Временное отключение видимости попапа*/
+.modal {    
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.feedback_container {
-    display: none; /* Временное отключение видимости попапа*/
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
+.full_map {
+    display: none;
+    z-index: 1;
 }
 
-.feedback {  
+.feedback { 
+    display: none; 
+    z-index: 1;
     width: 960px;
     padding: 90px 100px 70px 100px;
     background-color: var(--basic_white);

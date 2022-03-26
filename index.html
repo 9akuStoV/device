@@ -460,43 +460,42 @@
         </div>  
       </footer> 
       
-      <div class="full_map">
+      <div class="full_map modal">
         <img src="img/full_map.jpg" width="959" height="574" alt="Полноразмерная карта.">
-        <button class="button_close" type="button">
+        <button class="button_close" type="button"aria-label="Закрыть полноразмерную карту">
           <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="none">
             <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E"/>
             <path fill="#fff" d="M35.95 37.72L28 29.76l-7.95 7.96-1.78-1.77L26.24 28l-7.96-7.95 1.77-1.78L28 26.24l7.95-7.95 1.76 1.76L29.76 28l7.95 7.95-1.76 1.77z"/>
           </svg>
         </button>
       </div>
-      <div class="feedback_container">
-      <div class="feedback">
+      
+      <div class="feedback modal">
         <h2 class="visually_hidden">Форма обратной связи</h2>
         <form action="https://echo.htmlacademy.ru" class="feedback_form">
           <p class="feedback_item">
             <label class="feedback_name_field" for="feedback_name">
               Ваше имя:
-              <input class="feedback_input" id="feedback_name" name="name" type="text" placeholder="Имя Фамилия">
+              <input class="feedback_input" id="feedback_name" name="name" type="text" placeholder="Имя Фамилия" required>
             </label>
             <label class="feedback_email_field" for="feedback_email">
               Ваш e-mail:
-              <input class="feedback_input" id="feedback_email" name="e_mail" type="email" placeholder="email@example.com">
+              <input class="feedback_input" id="feedback_email" name="e_mail" type="email" placeholder="email@example.com"required>
             </label>
           </p>
           <p class="feedback_item">
             <label class="feedback_textarea_field" for="feedback_message">Текст письма:
-              <textarea class="feedback_textarea" name="message" id="feedback_message" placeholder="В свободной форме"></textarea>
+              <textarea class="feedback_textarea" name="message" id="feedback_message" placeholder="В свободной форме" required></textarea>
             </label>
           </p>
           <button class="button button_submit" type="submit">Отправить</button>
         </form>
-        <button class="button_close" type="button">
+        <button class="button_close" type="button" aria-label="Закрыть форму логина">
           <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="none">
             <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E"/>
             <path fill="#fff" d="M35.95 37.72L28 29.76l-7.95 7.96-1.78-1.77L26.24 28l-7.96-7.95 1.77-1.78L28 26.24l7.95-7.95 1.76 1.76L29.76 28l7.95 7.95-1.76 1.77z"/>
           </svg>
         </button>
-      </div>
       </div>
       <script src="js/script.js"></script>
   </body>
