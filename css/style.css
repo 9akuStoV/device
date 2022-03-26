@@ -1536,7 +1536,7 @@ body {
     font-size: 16px;
 	line-height: 20px; 
     letter-spacing: 0.1em;
-    
+    text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1547,6 +1547,14 @@ body {
     display: flex;
 }
 
+.pagination_button,
+.pagination_button_back,
+.pagination_button_forward {
+    font-family: 'Gilroy', "Arial", sans-serif;
+    font-weight: inherit;
+    border: none;
+    color: var(--basic_black_opacity30);
+}
 .pagination_item:not(:last-child) {
     margin-right: 30px;
 }
@@ -1569,10 +1577,6 @@ body {
 .pagination_button_back:active span,
 .pagination_button_forward:active span {    
     opacity: 0.3;
-}
-
-.pagination_button {
-    color: var(--basic_black_opacity30);
 }
 
 .pagination_button:hover {
