@@ -272,6 +272,10 @@ body {
     margin-bottom: 0;
 }
 
+.catalog_column{
+    max-width: 200px;
+}
+
 .catalog_column li:not(:last-child) {
     margin-bottom: 20px;
 }
@@ -290,10 +294,10 @@ body {
     flex-wrap: wrap;  
 }
 
-.nav_list li:not(:last-child) {
+.nav_list li:not(:nth-child(3)) {
     margin-right: 35px;
 }
-.nav_list li:last-child {
+.nav_list li:nth-child(3) {
     margin-left: auto;
 }
 
@@ -349,6 +353,7 @@ body {
 .catalog_header {
     position: relative;
     padding-right: 30px;
+    max-width: 400px;
 }
 
 .catalog_header::after {
@@ -359,7 +364,6 @@ body {
     height: 20px;  
     background: url(../img/svg/cross_gray.svg) no-repeat 50% 50%; 
 }
-
 
 .header_menu_item:hover,
 .catalog_item:hover,
@@ -421,7 +425,8 @@ body {
 	font-size: 47px;
 	line-height: 58px;
     margin-top: 0;
-    margin-bottom: 30px;   
+    margin-bottom: 30px; 
+    min-height: 173px;  
 }
 
 .slide_header::before {
@@ -479,6 +484,7 @@ body {
     padding-left: 60px;
     column-gap: 20px;
     margin-bottom: 50px; /*Дежурный отступ, убрать*/
+    min-height: 505px;
 }
 
 .slider_active {
@@ -488,6 +494,10 @@ body {
 .slide_text,
 .slide_button {
     margin-bottom: 50px;
+}
+
+.slide_text {
+    min-height: 40px;
 }
 
 .slide_button {
@@ -582,7 +592,7 @@ body {
 
 .service_container {
     width: 1160px;
-    height: 400px;
+    min-height: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 90px;
@@ -611,11 +621,6 @@ body {
     margin-bottom: 40px;
 }
 
-.service_text {
-    line-height: 30px; 
-    letter-spacing: 0.1em;
-}
-
 .service_slider {
     padding-top: 15px;
 }
@@ -625,6 +630,7 @@ body {
     padding-top: 80px;
     padding-bottom: 75px;
     border-right: var(--basic_black) 7px solid;
+    margin-bottom: 70px;
 }
 
 .service_pag_item {
@@ -633,6 +639,7 @@ body {
 
 .service_button {
     min-width: 160px;
+    max-width: 220px;
     margin-bottom: 10px;
 }
 
@@ -641,7 +648,7 @@ body {
 .service_button_active:hover {
     border: none;
     padding-right: 115px;
-    width: 275px;
+    min-width: 275px;
     background: var(--basic_black);
     color: var(--special_yellow); 
 }
@@ -656,6 +663,8 @@ body {
 	font-size: 15px;
 	line-height: 30px;
     letter-spacing: 0.1em;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .service_item {
@@ -686,7 +695,7 @@ body {
     width: 1160px;
     margin-left: auto;
     margin-right: auto; 
-    margin-bottom: 90px;  
+    margin-bottom: 70px;  
 }
 
 .brand_list {
@@ -698,6 +707,7 @@ body {
 .brand_item {    
     filter: grayscale(1);
     opacity: 0.3;
+    margin-bottom: 20px;
 }
 
 .brand_item:hover {
