@@ -834,6 +834,10 @@ body {
     background-color: var(--basic_white);
 }
 
+.modal_show {
+    display: block;
+  }
+
 .feedback_item {
     display: flex;
     flex-wrap: wrap;

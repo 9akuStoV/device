@@ -6,14 +6,6 @@ let slide_btn1 = document.querySelector(".slider_pagination_item:nth-child(1) .s
 let slide_btn2 = document.querySelector(".slider_pagination_item:nth-child(2) .slider_button");
 let slide_btn3 = document.querySelector(".slider_pagination_item:nth-child(3) .slider_button");
 
-let service_btn1 = document.querySelector(".service_pag_item:nth-child(1) .service_button");
-let service_btn2 = document.querySelector(".service_pag_item:nth-child(2) .service_button");
-let service_btn3 = document.querySelector(".service_pag_item:nth-child(3) .service_button");
-
-let service1 = document.querySelector(".service_list .service_item:nth-child(1)");
-let service2 = document.querySelector(".service_list .service_item:nth-child(2)");
-let service3 = document.querySelector(".service_list .service_item:nth-child(3)");
-
 slide_btn1.onclick= function() {
     slide1.classList.add("slider_active");
     slide2.classList.remove("slider_active");
@@ -43,6 +35,14 @@ slide_btn3.onclick= function() {
 
 //Переключатель сервисов
 
+let service_btn1 = document.querySelector(".service_pag_item:nth-child(1) .service_button");
+let service_btn2 = document.querySelector(".service_pag_item:nth-child(2) .service_button");
+let service_btn3 = document.querySelector(".service_pag_item:nth-child(3) .service_button");
+
+let service1 = document.querySelector(".service_list .service_item:nth-child(1)");
+let service2 = document.querySelector(".service_list .service_item:nth-child(2)");
+let service3 = document.querySelector(".service_list .service_item:nth-child(3)");
+
 service_btn1.onclick= function() {
     service_btn1.classList.add("service_button_active");
     service_btn2.classList.remove("service_button_active");
@@ -70,3 +70,34 @@ service_btn3.onclick= function() {
     service1.classList.remove("service_item_atcive");
 }
 
+// Модалка с контактом
+
+const feedback_btn = document.querySelector(".contact_button");
+const feedback_modal = document.querySelector(".feedback");
+const feedback_close = feedback_modal.querySelector(".button_close");
+
+feedback_btn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    feedback_modal.classList.add("modal_show");
+});
+
+feedback_close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    feedback_modal.classList.remove("modal_show");
+});
+
+// Модалка с картой
+
+const map_btn = document.querySelector(".map");
+const map_modal = document.querySelector(".full_map");
+const map_close = map_modal.querySelector(".button_close");
+
+map_btn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    map_modal.classList.add("modal_show");
+});
+
+map_close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    map_modal.classList.remove("modal_show");
+});
