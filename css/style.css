@@ -208,7 +208,8 @@ body {
     display: inline-block;       
 }
 
-.header_search_button:hover {
+.header_search_button:hover,
+.header_search_button:focus {
     color: var(--basic_white);
     background-color: var(--basic_black);
 }
@@ -221,6 +222,10 @@ body {
 
 .header_search_form:focus-within {
     border-bottom: 2px solid var(--basic_black); 
+}
+
+.header_search_form:focus-within .header_search_button {
+    display: block;
 }
 
 .header_search_form,
