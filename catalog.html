@@ -102,34 +102,29 @@
           </div>
           <div class="sorting_container">
             <span class="sorting_title">Сортировка:</span>
-            <div> 
+            
               <ul class="sorting_list no_list">
-                <li class="sorting_item">
-                  <input class="sorting_radio_button" checked type="radio" name="sorting_radio" value="price" id="sorting_radio_1_id" checked>
-                  <label class="sorting_radio_label" for="sorting_radio_1_id">По цене</label>
+                <li class="sorting_item sorting_item_active">
+                  <a href="#">По цене</a>
                 </li>
                 <li class="sorting_item">
-                  <input class="sorting_radio_button" type="radio" name="sorting_radio" value="type" id="sorting_radio_2_id">
-                  <label class="sorting_radio_label" for="sorting_radio_2_id">По типу</label>
+                  <a href="#">По типу</a>
                 </li>
                 <li class="sorting_item">
-                  <input class="sorting_radio_button" type="radio" name="sorting_radio" value="popular" id="sorting_radio_3_id">
-                  <label class="sorting_radio_label" for="sorting_radio_3_id">По популярности</label>
+                  <a href="#">По популярности</a>
                 </li>
               </ul>   
-            </div>
-            <div class="minmax_block"> 
+            
+            
               <ul class="minmax_list no_list">
                 <li class="minmax_item">
-                  <input checked type="radio" name="minmax_radio" value="up" id="minmax_radio_1_id" checked>
-                  <label for="minmax_radio_1_id"></label>
+                  <a href="#"><span class="visually_hidden">По возрастанию</span></a>
                 </li>
-                <li class="minmax_item">
-                  <input type="radio" name="minmax_radio" value="down" id="minmax_radio_2_id">
-                  <label for="minmax_radio_2_id"></label>
+                <li class="minmax_item minmax_itme_active">
+                  <a href="#"><span class="visually_hidden">По убыванию</span></a>
                 </li>
                 </ul>   
-            </div>
+            
           </div>
         </div>
       </div>
@@ -211,12 +206,13 @@
                 <div class="product_picture">
                   <a href="blank.html">
                     <img src="img/product/item_1.jpg" width="360" height="380" alt="Селфи палка с телефоном">
-                  </a>                  
+                  </a>  
+                  <div class="product_button_block">
+                    <button class="product_cart_button button" type="button" aria-label="Добавить в корзину любительскую селфи-палку">В корзину</button>
+                    <button class="product_compare_button" type="button" aria-label="Добавить к сравнению любительскую селфи-палку">Добавить к сравнению</button>
+                  </div>                
                 </div>
-                <div class="product_button_block">
-                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину любительскую селфи-палку">В корзину</button>
-                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению любительскую селфи-палку">Добавить к сравнению</button>
-                </div>
+                
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Любительская селфи-палка</a>
                   <span class="product_price">1100 руб</span>
@@ -227,11 +223,12 @@
                   <a href="blank.html">
                     <img src="img/product/item_2.jpg" width="360" height="380" alt="Чёрная селфи-палка">
                   </a>
+                  <div class="product_button_block">
+                    <button class="product_cart_button button" type="button" aria-label="Добавить в корзину профессиональную селфи-палку">В корзину</button>
+                    <button class="product_compare_button" type="button" aria-label="Добавить к сравнению профессиональную селфи-палку">Добавить к сравнению</button>
+                  </div>
                 </div>
-                <div class="product_button_block">
-                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину профессиональную селфи-палку">В корзину</button>
-                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению профессиональную селфи-палку">Добавить к сравнению</button>
-                </div>
+                
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Профессиональная <br> 
                     селфи-палка </a>
@@ -242,12 +239,12 @@
                 <div class="product_picture">
                   <a href="blank.html">
                     <img src="img/product/item_3.jpg" width="360" height="380" alt="Чёрно-жёлтая селфи-палка с камерой">
-                  </a>                  
-                </div>
-                <div class="product_button_block">
-                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину непотопляемую селфи-палку">В корзину</button>
-                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению непотопляемую селфи-палку">Добавить к сравнению</button>
-                </div>
+                  </a>
+                  <div class="product_button_block">
+                    <button class="product_cart_button button" type="button" aria-label="Добавить в корзину непотопляемую селфи-палку">В корзину</button>
+                    <button class="product_compare_button" type="button" aria-label="Добавить к сравнению непотопляемую селфи-палку">Добавить к сравнению</button>
+                  </div>                  
+                </div>                
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Непотопляемая <br> селфи-палка</a>
                   <span class="product_price">1500 руб</span>
@@ -258,36 +255,20 @@
                   <a href="blank.html">
                     <img src="img/product/item_4.jpg" width="360" height="380" alt="Селфи-палка в виде руки">
                   </a>
-                </div>
-                <div class="product_button_block">
-                  <button class="product_cart_button button" type="button" aria-label="Добавить в корзину селфи-палку «Следуй за мной»">В корзину</button>
-                  <button class="product_compare_button" type="button" aria-label="Добавить к сравнению селфи-палку «Следуй за мной»">Добавить к сравнению</button>
-                </div>
+                  <div class="product_button_block">
+                    <button class="product_cart_button button" type="button" aria-label="Добавить в корзину селфи-палку «Следуй за мной»">В корзину</button>
+                    <button class="product_compare_button" type="button" aria-label="Добавить к сравнению селфи-палку «Следуй за мной»">Добавить к сравнению</button>
+                  </div>
+                </div>                
                 <div class="product_header">
                   <a class="product_title" href="blank.html">Селфи-палка «Следуй за <br> мной»</a>
                   <span class="product_price">1900 руб</span>
                 </div>
               </li>
           </ul>
-          <div class="product_pagination"> <!--Пагинация-->
-            <button type="button" class="pagination_button_back">Назад</button>            
-            <ul class="pagination_list no_list">
-              <li class="pagination_item">
-                <button type="button" class="pagination_button pagination_button_active">1</button>
-              </li>
-              <li class="pagination_item">
-                <button type="button" class="pagination_button" href="#">2</button> 
-              </li>
-              <li class="pagination_item">
-                <button type="button" class="pagination_button" href="#">3</button> 
-              </li>
-            </ul>  
-            <button type="button" class="pagination_button_forward pagination_button_active" href="#">Вперед</button> 
-        </div>
-
 
         <div class="product_pagination"> <!--Пагинация-->
-          <a class="pagination_button_back" href="#"><span>Назад</span></a>
+          <a class="pagination_button_back pagination_button_active" href="#">Назад</a>
           <ul class="pagination_list no_list">
             <li class="pagination_item">
               <a class="pagination_button_active">1</a>
@@ -299,7 +280,7 @@
               <a class="pagination_button" href="#">3</a>
             </li>
           </ul>  
-          <a class="pagination_button_forward" href="#"><span>Вперед</span></a>
+          <a class="pagination_button_forward pagination_button_active" href="#">Вперед</a>
       </div>
         </div>
       </div>
