@@ -75,16 +75,58 @@ service_btn3.onclick= function() {
 const feedback_btn = document.querySelector(".contact_button");
 const feedback_modal = document.querySelector(".feedback");
 const feedback_close = feedback_modal.querySelector(".button_close");
+const feedback_form = feedback_modal.querySelector(".feedback_form");
+const feedback_name = feedback_modal.querySelector(".feedback_name_input");
+const feedback_email = feedback_modal.querySelector(".feedback_email_input");
+
+let isStorageSupport = true;
+let storage = "";
+
+try {
+  storage = localStorage.getItem("name");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 feedback_btn.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedback_modal.classList.add("modal_show");
+    if (storage) {
+        feedback_name.value = storage;
+        feedback_email.focus();
+    } else {
+        feedback_name.focus();
+      }
 });
 
 feedback_close.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedback_modal.classList.remove("modal_show");
+    feedback_modal.classList.remove("modal_error");
 });
+
+feedback_form.addEventListener("submit", function (evt) {
+    if (!feedback_name.value || !feedback_email.value) {
+        evt.preventDefault();
+        feedback_modal.classList.remove("modal_error");
+        feedback_modal.offsetWidth = feedback_modal.offsetWidth;
+        feedback_modal.classList.add("modal_error");
+      } else {
+        if (isStorageSupport) {
+        localStorage.setItem("name", feedback_name.value);
+      }
+    }
+});
+
+document.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (feedback_modal.classList.contains("modal_show")) {
+        evt.preventDefault();
+        feedback_modal.classList.remove("modal_show");        
+        feedback_modal.classList.remove("modal_error");
+      }
+    }
+  });
 
 // Модалка с картой
 
@@ -101,3 +143,12 @@ map_close.addEventListener("click", function (evt) {
     evt.preventDefault();
     map_modal.classList.remove("modal_show");
 });
+
+document.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (map_modal.classList.contains("modal_show")) {
+        evt.preventDefault();
+        map_modal.classList.remove("modal_show");
+      }
+    }
+  });
